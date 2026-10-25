@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ZeusRemote">
+<meta name="theme-color" content="#07080c">
+<title>ZeusRemote</title>
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8M6.3 6.3a8 8 0 1 0 11.4 0"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M9 7 4 12l5 5M4 12h11a5 5 0 0 1 0 10h-3"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7M5 10v10h5v-6h4v6h5V10"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></symbol>
+    <symbol id="i-input" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 9v5M9.5 11.5 12 14l2.5-2.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4zM17 9l4 6M21 9l-4 6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="i-remote" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="5"/><circle cx="12" cy="8" r="2"/><path d="M10 14h4M10 17h4"/></symbol>
+    <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+    <symbol id="i-enter" viewBox="0 0 24 24"><path d="M20 5v6a3 3 0 0 1-3 3H5M9 10l-4 4 4 4"/></symbol>
+    <symbol id="i-erase" viewBox="0 0 24 24"><path d="M21 5H9l-6 7 6 7h12zM12 9l6 6M18 9l-6 6"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+    <symbol id="i-dial" viewBox="0 0 24 24"><circle cx="6" cy="6" r="1.5"/><circle cx="12" cy="6" r="1.5"/><circle cx="18" cy="6" r="1.5"/><circle cx="6" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="18" cy="12" r="1.5"/><circle cx="12" cy="18" r="1.5"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="status" id="status"><span class="dot"></span><span class="label">Conectando</span></div>
+  <button class="icon-btn power" id="power" aria-label="Desligar a TV"><svg><use href="#i-power"/></svg></button>
+</header>
+<div class="banner" id="tcast-banner" hidden><span>O serviço T-Cast da TV está desligado: as teclas não chegam.</span><button id="tcast-revive">Reativar</button></div>
+
+<main>
+  <section class="view active" id="view-remote">
+    <div class="pad" id="pad">
+      <span class="chev up"><svg><use href="#i-up"/></svg></span>
+      <span class="chev down"><svg><use href="#i-down"/></svg></span>
+      <span class="chev left"><svg><use href="#i-left"/></svg></span>
+      <span class="chev right"><svg><use href="#i-right"/></svg></span>
+      <span class="core">OK</span>
+      <span class="ripple" id="ripple"></span>
+    </div>
+    <p class="hint">Toque nas bordas ou deslize. Segure para repetir.</p>
+
+    <button class="voice" id="voice"><span class="voice-orb"><svg><use href="#i-mic"/></svg></span><span>Falar com o Claude</span></button>
+
+    <div class="row3">
+      <button class="key" data-key="16"><svg><use href="#i-back"/></svg><span>Voltar</span></button>
+      <button class="key" data-key="19"><svg><use href="#i-home"/></svg><span>Início</span></button>
+      <button class="key" data-key="18"><svg><use href="#i-menu"/></svg><span>Ajustes</span></button>
+    </div>
+
+    <div class="media">
+      <div class="pill">
+        <button data-key="22" data-repeat aria-label="Volume menos"><svg><use href="#i-minus"/></svg></button>
+        <span class="pill-label">VOL</span>
+        <button data-key="21" data-repeat aria-label="Volume mais"><svg><use href="#i-plus"/></svg></button>
+      </div>
+      <button class="key round" data-key="23" aria-label="Mudo"><svg><use href="#i-mute"/></svg></button>
+      <div class="pill">
+        <button data-key="28" aria-label="Canal menos"><svg><use href="#i-down"/></svg></button>
+        <span class="pill-label">CH</span>
+        <button data-key="27" aria-label="Canal mais"><svg><use href="#i-up"/></svg></button>
+      </div>
+    </div>
+
+    <button class="key wide ghost" id="digits-toggle"><svg><use href="#i-dial"/></svg><span>Teclado numérico</span></button>
+    <div class="digits" id="digits">
+      <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+      <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+      <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+      <span></span><button data-key="10">0</button><span></span>
+    </div>
+  </section>
+
+  <section class="view" id="view-type">
+    <h2>Digitar na TV</h2>
+    <p class="hint left">Abra um campo de busca ou texto na TV e escreva aqui. O texto aparece na TV enquanto você digita.</p>
+    <div class="field">
+      <input id="text" type="text" maxlength="100" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Pesquisar, senha, endereço...">
+      <span class="count" id="count">0/100</span>
+    </div>
+    <div class="row3">
+      <button class="key" id="text-clear"><svg><use href="#i-erase"/></svg><span>Limpar</span></button>
+      <button class="key" data-key="16"><svg><use href="#i-back"/></svg><span>Fechar</span></button>
+      <button class="key accent" id="text-enter"><svg><use href="#i-enter"/></svg><span>Enviar</span></button>
+    </div>
+    <div class="mini-pad">
+      <button data-key="13" data-repeat aria-label="Esquerda"><svg><use href="#i-left"/></svg></button>
+      <button data-key="11" data-repeat aria-label="Cima"><svg><use href="#i-up"/></svg></button>
+      <button data-key="15" class="ok">OK</button>
+      <button data-key="12" data-repeat aria-label="Baixo"><svg><use href="#i-down"/></svg></button>
+      <button data-key="14" data-repeat aria-label="Direita"><svg><use href="#i-right"/></svg></button>
+    </div>
+  </section>
+
+  <section class="view" id="view-inputs">
+    <div class="section-head">
+      <h2>Fontes</h2>
+      <button class="icon-btn" id="inputs-refresh" aria-label="Atualizar fontes"><svg><use href="#i-refresh"/></svg></button>
+    </div>
+    <div class="list" id="inputs"><p class="hint left">Carregando fontes da TV...</p></div>
+    <h2>TV</h2>
+    <div class="grid2">
+      <button class="tile" data-app="com.tcl.settings"><svg><use href="#i-gear"/></svg><span>Configurações</span></button>
+      <button class="tile" data-key="18"><svg><use href="#i-menu"/></svg><span>Ajustes rápidos</span></button>
+      <button class="tile" data-key="29"><svg><use href="#i-input"/></svg><span>Menu de fontes</span></button>
+      <button class="tile" data-key="19"><svg><use href="#i-home"/></svg><span>Tela inicial</span></button>
+    </div>
+  </section>
+
+  <section class="view" id="view-apps">
+    <h2>Apps</h2>
+    <div class="apps" id="apps"></div>
+  </section>
+</main>
+
+<nav class="tabs">
+  <button class="tab active" data-view="remote"><svg><use href="#i-remote"/></svg><span>Controle</span></button>
+  <button class="tab" data-view="type"><svg><use href="#i-keyboard"/></svg><span>Teclado</span></button>
+  <button class="tab" data-view="inputs"><svg><use href="#i-input"/></svg><span>Fontes</span></button>
+  <button class="tab" data-view="apps"><svg><use href="#i-grid"/></svg><span>Apps</span></button>
+</nav>
+
+<div class="sheet-backdrop" id="sheet">
+  <div class="sheet">
+    <h3>Desligar a TV?</h3>
+    <p>Em standby a TV desliga a rede. Para ligar de novo, use o controle físico ou o botão da TV.</p>
+    <div class="sheet-actions">
+      <button class="key" id="sheet-cancel"><span>Cancelar</span></button>
+      <button class="key danger" id="sheet-confirm"><span>Desligar</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="/app.js"></script>
+</body>
+</html>

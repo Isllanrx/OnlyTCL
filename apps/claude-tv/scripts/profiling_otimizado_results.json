@@ -1,0 +1,1224 @@
+{
+  "device_info": {
+    "model": "Smart TV Pro",
+    "android_version": "11",
+    "sdk": "30",
+    "abi": "armeabi-v7a",
+    "cpu_freq_khz": "1300000",
+    "cpu_governor": "performance",
+    "kernel": "Linux localhost 4.14.198+ #2 SMP PREEMPT Wed May 8 12:37:49 CST 2024 armv7l",
+    "meminfo": {
+      "MemTotal": "2097152 kB",
+      "MemFree": "340500 kB",
+      "MemAvailable": "566956 kB",
+      "Buffers": "2096 kB",
+      "Cached": "340308 kB",
+      "SwapCached": "12260 kB",
+      "Active": "277292 kB",
+      "Inactive": "379424 kB",
+      "Active(anon)": "131128 kB",
+      "Inactive(anon)": "189016 kB",
+      "Active(file)": "146164 kB",
+      "Inactive(file)": "190408 kB"
+    }
+  },
+  "aot_status": {
+    "dexopt_state": [
+      "Dexopt state:",
+      "arm: [status=speed] [reason=unknown]"
+    ],
+    "is_speed": true
+  },
+  "jni_benchmark": {
+    "command_roundtrip_ms": [
+      385.6394290924072,
+      88.72389793395996,
+      102.29825973510742,
+      94.43092346191406,
+      94.7561264038086
+    ],
+    "avg_ms": 153.16972732543945,
+    "min_ms": 88.72389793395996,
+    "max_ms": 385.6394290924072
+  },
+  "cold_start_main": [
+    {
+      "run": 1,
+      "pid": 2045,
+      "wall_time_ms": 3203.681707382202,
+      "am_start": {
+        "this_time": null,
+        "total_time": null,
+        "wait_time": 3037,
+        "launch_state": "UNKNOWN (-1)"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 90680,
+        "native_heap_pss_kb": 10948,
+        "code_pss_kb": 126088,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 257677,
+        "total_rss_kb": 355308,
+        "swap_pss_kb": 1212
+      },
+      "gfxinfo": {
+        "total_frames": 0,
+        "janky_frames": 0,
+        "jank_pct": 0.0,
+        "p50_ms": 4950,
+        "p90_ms": 4950,
+        "p95_ms": 4950,
+        "p99_ms": 4950,
+        "slow_ui_thread": 0,
+        "slow_draw_cmds": 0,
+        "missed_vsync": 0,
+        "high_input_lat": 0,
+        "deadline_missed": 0,
+        "gpu_p50_ms": 4950,
+        "gpu_p90_ms": 4950
+      },
+      "davey_breakdown": [
+        {
+          "duration_ms": 2116,
+          "intended_vsync": 11210200051949,
+          "vsync": 11212150051871,
+          "handle_input": 11212161952094,
+          "anim_start": 11212161957168,
+          "traversals_start": 11212163434983,
+          "draw_start": 11212258557871,
+          "sync_queued": 11212284084686,
+          "sync_start": 11212284300945,
+          "issue_draw_cmds": 11212284763205,
+          "swap_buffers": 11212314153834,
+          "frame_completed": 11212316375094,
+          "vsync_delay_ms": 1949.999922,
+          "ui_traversal_ms": 120.649703,
+          "renderthread_sync_ms": 0.46226,
+          "renderthread_draw_ms": 29.390629,
+          "swap_to_complete_ms": 2.22126
+        }
+      ],
+      "gc_events_count": 5,
+      "skipped_frames_total": 460,
+      "top_threads": [
+        "Threads: 101 total,   3 running,  98 sleeping,   0 stopped,   0 zombie",
+        "Mem: 16777216T total,  2030788K used,  67956736 free,   5640192 buffers",
+        "Swap:  1048572K total,   543168K used,   505404K free,   506164K cached",
+        "400%cpu 258%user 173%nice 178%sys 240%idle   0%iow   0%irq  31%sirq   0%host",
+        "TID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ THREAD          PROCESS",
+        "2045 u0_a62       10 -10 2.2G 364M 234M R 91.1  17.7   0:02.59 nthropic.claude com.anthropic.claude",
+        "2065 u0_a62       24   4 2.2G 364M 234M S 40.0  17.7   0:00.00 HeapTaskDaemon  com.anthropic.claude",
+        "2173 u0_a62       20   0 2.2G 365M 234M D 33.3  17.7   0:00.77 datadog-storage com.anthropic.claude",
+        "2160 u0_a62       10 -10 2.2G 365M 234M S 22.2  17.7   0:00.13 RenderThread    com.anthropic.claude",
+        "2135 u0_a62       20   0 2.2G 364M 234M S 17.7  17.7   0:00.08 DefaultDispatch com.anthropic.claude"
+      ]
+    },
+    {
+      "run": 2,
+      "pid": 2569,
+      "wall_time_ms": 5440.5834674835205,
+      "am_start": {
+        "this_time": null,
+        "total_time": 5251,
+        "wait_time": 5281,
+        "launch_state": "COLD"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 31952,
+        "native_heap_pss_kb": 17820,
+        "code_pss_kb": 134960,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 213094,
+        "total_rss_kb": 303920,
+        "swap_pss_kb": 272
+      },
+      "gfxinfo": {
+        "total_frames": 16,
+        "janky_frames": 14,
+        "jank_pct": 87.5,
+        "p50_ms": 125,
+        "p90_ms": 2300,
+        "p95_ms": 2700,
+        "p99_ms": 2700,
+        "slow_ui_thread": 12,
+        "slow_draw_cmds": 2,
+        "missed_vsync": 8,
+        "high_input_lat": 3,
+        "deadline_missed": 12,
+        "gpu_p50_ms": 6,
+        "gpu_p90_ms": 8
+      },
+      "davey_breakdown": [
+        {
+          "duration_ms": 2345,
+          "intended_vsync": 11228049773407,
+          "vsync": 11228049773407,
+          "handle_input": 11228050202529,
+          "anim_start": 11228050206047,
+          "traversals_start": 11229329750306,
+          "draw_start": 11229332949158,
+          "sync_queued": 11230091488676,
+          "sync_start": 11230092949564,
+          "issue_draw_cmds": 11230287033787,
+          "swap_buffers": 11230394889861,
+          "frame_completed": 11230396857935,
+          "vsync_delay_ms": 0.0,
+          "ui_traversal_ms": 761.73837,
+          "renderthread_sync_ms": 194.084223,
+          "renderthread_draw_ms": 107.856074,
+          "swap_to_complete_ms": 1.968074
+        },
+        {
+          "duration_ms": 2739,
+          "intended_vsync": 11228066440073,
+          "vsync": 11230749773299,
+          "handle_input": 11230753948601,
+          "anim_start": 11230753952342,
+          "traversals_start": 11230791162009,
+          "draw_start": 11230791420786,
+          "sync_queued": 11230800590083,
+          "sync_start": 11230800683527,
+          "issue_draw_cmds": 11230801057453,
+          "swap_buffers": 11230804230749,
+          "frame_completed": 11230805719860,
+          "vsync_delay_ms": 2683.333226,
+          "ui_traversal_ms": 9.428074,
+          "renderthread_sync_ms": 0.373926,
+          "renderthread_draw_ms": 3.173296,
+          "swap_to_complete_ms": 1.489111
+        },
+        {
+          "duration_ms": 989,
+          "intended_vsync": 11230766421314,
+          "vsync": 11231216421296,
+          "handle_input": 11231219417045,
+          "anim_start": 11231219420601,
+          "traversals_start": 11231253181601,
+          "draw_start": 11231253305379,
+          "sync_queued": 11231265835860,
+          "sync_start": 11231265933823,
+          "issue_draw_cmds": 11231266268193,
+          "swap_buffers": 11231753997230,
+          "frame_completed": 11231755840749,
+          "vsync_delay_ms": 449.999982,
+          "ui_traversal_ms": 12.654259,
+          "renderthread_sync_ms": 0.33437,
+          "renderthread_draw_ms": 487.729037,
+          "swap_to_complete_ms": 1.843519
+        }
+      ],
+      "gc_events_count": 2,
+      "skipped_frames_total": 311,
+      "top_threads": [
+        "Threads: 109 total,   0 running, 109 sleeping,   0 stopped,   0 zombie",
+        "Mem: 16777216T total,  1874664K used,   222488K free,   5537792 buffers",
+        "Swap:  1048572K total,   557492K used,   491080K free,   444792K cached",
+        "400%cpu  22%user   3%nice  28%sys  94%idle 156%iow   0%irq  97%sirq   0%host",
+        "TID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ THREAD          PROCESS",
+        "2844 u0_a62       20   0 2.1G 287M 231M S  0.0  14.0   0:00.00 Binder:2569_4   com.anthropic.claude",
+        "2843 u0_a62       20   0 2.1G 287M 231M S  0.0  14.0   0:00.00 PlayBillingLibr com.anthropic.claude",
+        "2842 u0_a62       18  -2 2.1G 287M 231M S  0.0  14.0   0:00.00 hwuiTask1       com.anthropic.claude",
+        "2841 u0_a62       18  -2 2.1G 287M 231M S  0.0  14.0   0:00.00 hwuiTask0       com.anthropic.claude",
+        "2839 u0_a62       20   0 2.1G 287M 231M S  0.0  14.0   0:00.00 PlayBillingLibr com.anthropic.claude"
+      ]
+    },
+    {
+      "run": 3,
+      "pid": 2888,
+      "wall_time_ms": 5490.814208984375,
+      "am_start": {
+        "this_time": null,
+        "total_time": 5375,
+        "wait_time": 5386,
+        "launch_state": "COLD"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 90684,
+        "native_heap_pss_kb": 17236,
+        "code_pss_kb": 141820,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 281386,
+        "total_rss_kb": 370528,
+        "swap_pss_kb": 670
+      },
+      "gfxinfo": {
+        "total_frames": 23,
+        "janky_frames": 20,
+        "jank_pct": 86.96,
+        "p50_ms": 73,
+        "p90_ms": 700,
+        "p95_ms": 1300,
+        "p99_ms": 1550,
+        "slow_ui_thread": 15,
+        "slow_draw_cmds": 4,
+        "missed_vsync": 11,
+        "high_input_lat": 4,
+        "deadline_missed": 16,
+        "gpu_p50_ms": 7,
+        "gpu_p90_ms": 11
+      },
+      "davey_breakdown": [
+        {
+          "duration_ms": 1337,
+          "intended_vsync": 11242700045861,
+          "vsync": 11242700045861,
+          "handle_input": 11242707027483,
+          "anim_start": 11242707031409,
+          "traversals_start": 11243550314445,
+          "draw_start": 11243552425445,
+          "sync_queued": 11243992410964,
+          "sync_start": 11243993228112,
+          "issue_draw_cmds": 11244024566149,
+          "swap_buffers": 11244035064149,
+          "frame_completed": 11244037879112,
+          "vsync_delay_ms": 0.0,
+          "ui_traversal_ms": 442.096519,
+          "renderthread_sync_ms": 31.338037,
+          "renderthread_draw_ms": 10.498,
+          "swap_to_complete_ms": 2.814963
+        },
+        {
+          "duration_ms": 1551,
+          "intended_vsync": 11242716712527,
+          "vsync": 11244183379135,
+          "handle_input": 11244189345963,
+          "anim_start": 11244189349556,
+          "traversals_start": 11244246830667,
+          "draw_start": 11244246989075,
+          "sync_queued": 11244259956223,
+          "sync_start": 11244260121408,
+          "issue_draw_cmds": 11244260472445,
+          "swap_buffers": 11244263796741,
+          "frame_completed": 11244268186445,
+          "vsync_delay_ms": 1466.666608,
+          "ui_traversal_ms": 13.125556,
+          "renderthread_sync_ms": 0.351037,
+          "renderthread_draw_ms": 3.324296,
+          "swap_to_complete_ms": 4.389704
+        }
+      ],
+      "gc_events_count": 2,
+      "skipped_frames_total": 230,
+      "top_threads": [
+        "Threads: 111 total,   0 running, 111 sleeping,   0 stopped,   0 zombie",
+        "Mem: 16777216T total,  1957580K used,   139572K free,   3878912 buffers",
+        "Swap:  1048572K total,   567732K used,   480840K free,   497556K cached",
+        "400%cpu  41%user  65%nice  62%sys 195%idle  14%iow   0%irq  24%sirq   0%host",
+        "TID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ THREAD          PROCESS",
+        "3082 u0_a62       20   0 2.1G 307M 253M S  0.0  15.0   0:00.00 pool-15-thread- com.anthropic.claude",
+        "3080 u0_a62       20   0 2.1G 307M 253M S  0.0  15.0   0:00.00 PlayBillingLibr com.anthropic.claude",
+        "3077 u0_a62       20   0 2.1G 307M 253M S  0.0  15.0   0:00.00 PlayBillingLibr com.anthropic.claude",
+        "3076 u0_a62       10 -10 2.1G 307M 253M S  0.0  15.0   0:00.02 RenderThread    com.anthropic.claude",
+        "3074 u0_a62       18  -2 2.1G 307M 253M S  0.0  15.0   0:00.00 hwuiTask1       com.anthropic.claude"
+      ]
+    },
+    {
+      "run": 4,
+      "pid": 3121,
+      "wall_time_ms": 3277.484178543091,
+      "am_start": {
+        "this_time": null,
+        "total_time": 3156,
+        "wait_time": 3168,
+        "launch_state": "COLD"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 19824,
+        "native_heap_pss_kb": 16960,
+        "code_pss_kb": 139740,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 211125,
+        "total_rss_kb": 304780,
+        "swap_pss_kb": 281
+      },
+      "gfxinfo": {
+        "total_frames": 24,
+        "janky_frames": 22,
+        "jank_pct": 91.67,
+        "p50_ms": 57,
+        "p90_ms": 350,
+        "p95_ms": 1350,
+        "p99_ms": 1500,
+        "slow_ui_thread": 17,
+        "slow_draw_cmds": 6,
+        "missed_vsync": 11,
+        "high_input_lat": 5,
+        "deadline_missed": 17,
+        "gpu_p50_ms": 7,
+        "gpu_p90_ms": 20
+      },
+      "davey_breakdown": [
+        {
+          "duration_ms": 1372,
+          "intended_vsync": 11254066218732,
+          "vsync": 11254066218732,
+          "handle_input": 11254069116365,
+          "anim_start": 11254069120439,
+          "traversals_start": 11254946121587,
+          "draw_start": 11254948258550,
+          "sync_queued": 11255396868142,
+          "sync_start": 11255397655401,
+          "issue_draw_cmds": 11255425663883,
+          "swap_buffers": 11255437264994,
+          "frame_completed": 11255439930253,
+          "vsync_delay_ms": 0.0,
+          "ui_traversal_ms": 450.746555,
+          "renderthread_sync_ms": 28.008482,
+          "renderthread_draw_ms": 11.601111,
+          "swap_to_complete_ms": 2.665259
+        },
+        {
+          "duration_ms": 1538,
+          "intended_vsync": 11254082887249,
+          "vsync": 11255532887191,
+          "handle_input": 11255541785772,
+          "anim_start": 11255541791031,
+          "traversals_start": 11255596884772,
+          "draw_start": 11255597088957,
+          "sync_queued": 11255612488290,
+          "sync_start": 11255612578364,
+          "issue_draw_cmds": 11255613097846,
+          "swap_buffers": 11255617492179,
+          "frame_completed": 11255621387327,
+          "vsync_delay_ms": 1449.999942,
+          "ui_traversal_ms": 15.603518,
+          "renderthread_sync_ms": 0.519482,
+          "renderthread_draw_ms": 4.394333,
+          "swap_to_complete_ms": 3.895148
+        }
+      ],
+      "gc_events_count": 2,
+      "skipped_frames_total": 132,
+      "top_threads": [
+        "Threads: 109 total,   0 running, 109 sleeping,   0 stopped,   0 zombie",
+        "Mem: 16777216T total,  1910588K used,   186564K free,   2650112 buffers",
+        "Swap:  1048572K total,   578332K used,   470240K free,   451360K cached",
+        "400%cpu  11%user  86%nice  50%sys 208%idle  25%iow   0%irq  19%sirq   0%host",
+        "TID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ THREAD          PROCESS",
+        "3192 u0_a62       10 -10 2.1G 311M 257M S  2.7  15.1   0:00.30 RenderThread    com.anthropic.claude",
+        "3121 u0_a62       10 -10 2.1G 311M 257M S  2.7  15.1   0:03.17 nthropic.claude com.anthropic.claude",
+        "3322 u0_a62       20   0 2.1G 311M 257M S  0.0  15.1   0:00.00 PlayBillingLibr com.anthropic.claude",
+        "3320 u0_a62       20   0 2.1G 311M 257M S  0.0  15.1   0:00.00 PlayBillingLibr com.anthropic.claude",
+        "3317 u0_a62       18  -2 2.1G 311M 257M S  0.0  15.1   0:00.00 hwuiTask0       com.anthropic.claude"
+      ]
+    },
+    {
+      "run": 5,
+      "pid": 3363,
+      "wall_time_ms": 3006.817579269409,
+      "am_start": {
+        "this_time": null,
+        "total_time": 2895,
+        "wait_time": 2913,
+        "launch_state": "COLD"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 124824,
+        "native_heap_pss_kb": 18176,
+        "code_pss_kb": 140808,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 319394,
+        "total_rss_kb": 412384,
+        "swap_pss_kb": 1166
+      },
+      "gfxinfo": {
+        "total_frames": 21,
+        "janky_frames": 18,
+        "jank_pct": 85.71,
+        "p50_ms": 77,
+        "p90_ms": 350,
+        "p95_ms": 1250,
+        "p99_ms": 1400,
+        "slow_ui_thread": 15,
+        "slow_draw_cmds": 4,
+        "missed_vsync": 11,
+        "high_input_lat": 3,
+        "deadline_missed": 15,
+        "gpu_p50_ms": 7,
+        "gpu_p90_ms": 17
+      },
+      "davey_breakdown": [
+        {
+          "duration_ms": 1262,
+          "intended_vsync": 11263465786007,
+          "vsync": 11263465786007,
+          "handle_input": 11263471299841,
+          "anim_start": 11263471303730,
+          "traversals_start": 11264283845618,
+          "draw_start": 11264285526803,
+          "sync_queued": 11264687686544,
+          "sync_start": 11264688375396,
+          "issue_draw_cmds": 11264715601359,
+          "swap_buffers": 11264725376359,
+          "frame_completed": 11264729167285,
+          "vsync_delay_ms": 0.0,
+          "ui_traversal_ms": 403.840926,
+          "renderthread_sync_ms": 27.225963,
+          "renderthread_draw_ms": 9.775,
+          "swap_to_complete_ms": 3.790926
+        },
+        {
+          "duration_ms": 1408,
+          "intended_vsync": 11263482450153,
+          "vsync": 11264815783433,
+          "handle_input": 11264826496692,
+          "anim_start": 11264826500877,
+          "traversals_start": 11264870907470,
+          "draw_start": 11264871057914,
+          "sync_queued": 11264881060359,
+          "sync_start": 11264881151618,
+          "issue_draw_cmds": 11264882580470,
+          "swap_buffers": 11264888515470,
+          "frame_completed": 11264890725692,
+          "vsync_delay_ms": 1333.33328,
+          "ui_traversal_ms": 10.152889,
+          "renderthread_sync_ms": 1.428852,
+          "renderthread_draw_ms": 5.935,
+          "swap_to_complete_ms": 2.210222
+        }
+      ],
+      "gc_events_count": 2,
+      "skipped_frames_total": 121,
+      "top_threads": [
+        "Threads: 110 total,   0 running, 110 sleeping,   0 stopped,   0 zombie",
+        "Mem: 16777216T total,  1913520K used,   183632K free,   2805760 buffers",
+        "Swap:  1048572K total,   578984K used,   469588K free,   464056K cached",
+        "400%cpu  17%user  44%nice  42%sys 183%idle  47%iow   0%irq  67%sirq   0%host",
+        "TID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ THREAD          PROCESS",
+        "3446 u0_a62       10 -10 2.1G 311M 258M S  2.7  15.1   0:00.28 RenderThread    com.anthropic.claude",
+        "3439 u0_a62       20   0 2.1G 311M 258M S  2.7  15.1   0:00.03 DefaultDispatch com.anthropic.claude",
+        "3434 u0_a62       20   0 2.1G 311M 258M S  2.7  15.1   0:00.22 DefaultDispatch com.anthropic.claude",
+        "3567 u0_a62       20   0 2.1G 311M 258M S  0.0  15.1   0:00.00 PlayBillingLibr com.anthropic.claude",
+        "3566 u0_a62       20   0 2.1G 311M 258M S  0.0  15.1   0:00.00 PlayBillingLibr com.anthropic.claude"
+      ]
+    }
+  ],
+  "warm_start_main": [
+    {
+      "run": 1,
+      "pid": 3363,
+      "wall_time_ms": 498.4002113342285,
+      "am_start": {
+        "this_time": null,
+        "total_time": 286,
+        "wait_time": 297,
+        "launch_state": "HOT"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 35628,
+        "native_heap_pss_kb": 15988,
+        "code_pss_kb": 139352,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 225796,
+        "total_rss_kb": 325544,
+        "swap_pss_kb": 182
+      },
+      "gfxinfo": {
+        "total_frames": 7,
+        "janky_frames": 2,
+        "jank_pct": 28.57,
+        "p50_ms": 9,
+        "p90_ms": 150,
+        "p95_ms": 150,
+        "p99_ms": 150,
+        "slow_ui_thread": 2,
+        "slow_draw_cmds": 1,
+        "missed_vsync": 1,
+        "high_input_lat": 1,
+        "deadline_missed": 2,
+        "gpu_p50_ms": 19,
+        "gpu_p90_ms": 20
+      },
+      "davey_breakdown": [],
+      "gc_events_count": 0,
+      "skipped_frames_total": 0
+    },
+    {
+      "run": 2,
+      "pid": 3363,
+      "wall_time_ms": 271.00372314453125,
+      "am_start": {
+        "this_time": null,
+        "total_time": 142,
+        "wait_time": 157,
+        "launch_state": "HOT"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 29500,
+        "native_heap_pss_kb": 15944,
+        "code_pss_kb": 138708,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 219025,
+        "total_rss_kb": 318976,
+        "swap_pss_kb": 182
+      },
+      "gfxinfo": {
+        "total_frames": 7,
+        "janky_frames": 2,
+        "jank_pct": 28.57,
+        "p50_ms": 8,
+        "p90_ms": 69,
+        "p95_ms": 69,
+        "p99_ms": 69,
+        "slow_ui_thread": 2,
+        "slow_draw_cmds": 0,
+        "missed_vsync": 1,
+        "high_input_lat": 1,
+        "deadline_missed": 2,
+        "gpu_p50_ms": 7,
+        "gpu_p90_ms": 18
+      },
+      "davey_breakdown": [],
+      "gc_events_count": 0,
+      "skipped_frames_total": 0
+    },
+    {
+      "run": 3,
+      "pid": 3363,
+      "wall_time_ms": 292.27256774902344,
+      "am_start": {
+        "this_time": null,
+        "total_time": 168,
+        "wait_time": 183,
+        "launch_state": "HOT"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 27456,
+        "native_heap_pss_kb": 17740,
+        "code_pss_kb": 133648,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 213602,
+        "total_rss_kb": 313452,
+        "swap_pss_kb": 182
+      },
+      "gfxinfo": {
+        "total_frames": 7,
+        "janky_frames": 1,
+        "jank_pct": 14.29,
+        "p50_ms": 7,
+        "p90_ms": 105,
+        "p95_ms": 105,
+        "p99_ms": 105,
+        "slow_ui_thread": 1,
+        "slow_draw_cmds": 1,
+        "missed_vsync": 1,
+        "high_input_lat": 0,
+        "deadline_missed": 1,
+        "gpu_p50_ms": 13,
+        "gpu_p90_ms": 20
+      },
+      "davey_breakdown": [],
+      "gc_events_count": 0,
+      "skipped_frames_total": 0
+    },
+    {
+      "run": 4,
+      "pid": 3363,
+      "wall_time_ms": 326.46775245666504,
+      "am_start": {
+        "this_time": null,
+        "total_time": 178,
+        "wait_time": 188,
+        "launch_state": "HOT"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 29396,
+        "native_heap_pss_kb": 15960,
+        "code_pss_kb": 121140,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 199691,
+        "total_rss_kb": 292964,
+        "swap_pss_kb": 190
+      },
+      "gfxinfo": {
+        "total_frames": 7,
+        "janky_frames": 2,
+        "jank_pct": 28.57,
+        "p50_ms": 7,
+        "p90_ms": 65,
+        "p95_ms": 65,
+        "p99_ms": 65,
+        "slow_ui_thread": 2,
+        "slow_draw_cmds": 1,
+        "missed_vsync": 0,
+        "high_input_lat": 1,
+        "deadline_missed": 2,
+        "gpu_p50_ms": 10,
+        "gpu_p90_ms": 14
+      },
+      "davey_breakdown": [],
+      "gc_events_count": 0,
+      "skipped_frames_total": 0
+    },
+    {
+      "run": 5,
+      "pid": 3363,
+      "wall_time_ms": 268.5203552246094,
+      "am_start": {
+        "this_time": null,
+        "total_time": 145,
+        "wait_time": 162,
+        "launch_state": "HOT"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 27608,
+        "native_heap_pss_kb": 17624,
+        "code_pss_kb": 121160,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 199329,
+        "total_rss_kb": 292404,
+        "swap_pss_kb": 190
+      },
+      "gfxinfo": {
+        "total_frames": 7,
+        "janky_frames": 2,
+        "jank_pct": 28.57,
+        "p50_ms": 8,
+        "p90_ms": 69,
+        "p95_ms": 69,
+        "p99_ms": 69,
+        "slow_ui_thread": 2,
+        "slow_draw_cmds": 2,
+        "missed_vsync": 1,
+        "high_input_lat": 1,
+        "deadline_missed": 2,
+        "gpu_p50_ms": 10,
+        "gpu_p90_ms": 12
+      },
+      "davey_breakdown": [],
+      "gc_events_count": 0,
+      "skipped_frames_total": 0
+    }
+  ],
+  "overlay_warm_start": [
+    {
+      "run": 1,
+      "pid": 3363,
+      "wall_time_ms": 930.4678440093994,
+      "close_duration_ms": 3547.7945804595947,
+      "am_start": {
+        "this_time": null,
+        "total_time": 830,
+        "wait_time": 840,
+        "launch_state": "WARM"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 36964,
+        "native_heap_pss_kb": 24660,
+        "code_pss_kb": 108832,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 201576,
+        "total_rss_kb": 285608,
+        "swap_pss_kb": 191
+      },
+      "gfxinfo": {
+        "total_frames": 14,
+        "janky_frames": 12,
+        "jank_pct": 85.71,
+        "p50_ms": 200,
+        "p90_ms": 900,
+        "p95_ms": 1400,
+        "p99_ms": 1400,
+        "slow_ui_thread": 5,
+        "slow_draw_cmds": 9,
+        "missed_vsync": 3,
+        "high_input_lat": 4,
+        "deadline_missed": 10,
+        "gpu_p50_ms": 4950,
+        "gpu_p90_ms": 4950
+      },
+      "davey_breakdown": [
+        {
+          "duration_ms": 918,
+          "intended_vsync": 11322131867421,
+          "vsync": 11322615200735,
+          "handle_input": 11322619805917,
+          "anim_start": 11322619808695,
+          "traversals_start": 11322737847880,
+          "draw_start": 11322742888620,
+          "sync_queued": 11322796287398,
+          "sync_start": 11322796635694,
+          "issue_draw_cmds": 11322797110694,
+          "swap_buffers": 11323041102398,
+          "frame_completed": 11323051016250,
+          "vsync_delay_ms": 483.333314,
+          "ui_traversal_ms": 58.439518,
+          "renderthread_sync_ms": 0.475,
+          "renderthread_draw_ms": 243.991704,
+          "swap_to_complete_ms": 9.913852
+        },
+        {
+          "duration_ms": 1417,
+          "intended_vsync": 11322965250739,
+          "vsync": 11323665250711,
+          "handle_input": 11323669982435,
+          "anim_start": 11323669994324,
+          "traversals_start": 11323784287249,
+          "draw_start": 11323790236138,
+          "sync_queued": 11323812824916,
+          "sync_start": 11323813252286,
+          "issue_draw_cmds": 11323813661138,
+          "swap_buffers": 11324379394768,
+          "frame_completed": 11324382899175,
+          "vsync_delay_ms": 699.999972,
+          "ui_traversal_ms": 28.537667,
+          "renderthread_sync_ms": 0.408852,
+          "renderthread_draw_ms": 565.73363,
+          "swap_to_complete_ms": 3.504407
+        }
+      ],
+      "gc_events_count": 2,
+      "skipped_frames_total": 73
+    },
+    {
+      "run": 2,
+      "pid": 3363,
+      "wall_time_ms": 408.0526828765869,
+      "close_duration_ms": 2984.9345684051514,
+      "am_start": {
+        "this_time": null,
+        "total_time": 311,
+        "wait_time": 318,
+        "launch_state": "WARM"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 33784,
+        "native_heap_pss_kb": 25268,
+        "code_pss_kb": 121984,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 209174,
+        "total_rss_kb": 286884,
+        "swap_pss_kb": 910
+      },
+      "gfxinfo": {
+        "total_frames": 24,
+        "janky_frames": 22,
+        "jank_pct": 91.67,
+        "p50_ms": 150,
+        "p90_ms": 300,
+        "p95_ms": 400,
+        "p99_ms": 550,
+        "slow_ui_thread": 0,
+        "slow_draw_cmds": 0,
+        "missed_vsync": 0,
+        "high_input_lat": 24,
+        "deadline_missed": 0,
+        "gpu_p50_ms": 4950,
+        "gpu_p90_ms": 4950
+      },
+      "davey_breakdown": [],
+      "gc_events_count": 2,
+      "skipped_frames_total": 0
+    },
+    {
+      "run": 3,
+      "pid": 3363,
+      "wall_time_ms": 412.10365295410156,
+      "close_duration_ms": 2828.545093536377,
+      "am_start": {
+        "this_time": null,
+        "total_time": 304,
+        "wait_time": 317,
+        "launch_state": "WARM"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 38476,
+        "native_heap_pss_kb": 25740,
+        "code_pss_kb": 122532,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 215175,
+        "total_rss_kb": 292616,
+        "swap_pss_kb": 1130
+      },
+      "gfxinfo": {
+        "total_frames": 22,
+        "janky_frames": 19,
+        "jank_pct": 86.36,
+        "p50_ms": 150,
+        "p90_ms": 350,
+        "p95_ms": 350,
+        "p99_ms": 400,
+        "slow_ui_thread": 11,
+        "slow_draw_cmds": 8,
+        "missed_vsync": 7,
+        "high_input_lat": 8,
+        "deadline_missed": 12,
+        "gpu_p50_ms": 4950,
+        "gpu_p90_ms": 4950
+      },
+      "davey_breakdown": [],
+      "gc_events_count": 2,
+      "skipped_frames_total": 0
+    },
+    {
+      "run": 4,
+      "pid": 3363,
+      "wall_time_ms": 403.55801582336426,
+      "close_duration_ms": 3659.21950340271,
+      "am_start": {
+        "this_time": null,
+        "total_time": 297,
+        "wait_time": 308,
+        "launch_state": "WARM"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 43672,
+        "native_heap_pss_kb": 26444,
+        "code_pss_kb": 122668,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 221171,
+        "total_rss_kb": 298440,
+        "swap_pss_kb": 1150
+      },
+      "gfxinfo": {
+        "total_frames": 26,
+        "janky_frames": 25,
+        "jank_pct": 96.15,
+        "p50_ms": 150,
+        "p90_ms": 250,
+        "p95_ms": 250,
+        "p99_ms": 300,
+        "slow_ui_thread": 0,
+        "slow_draw_cmds": 0,
+        "missed_vsync": 0,
+        "high_input_lat": 26,
+        "deadline_missed": 0,
+        "gpu_p50_ms": 4950,
+        "gpu_p90_ms": 4950
+      },
+      "davey_breakdown": [],
+      "gc_events_count": 2,
+      "skipped_frames_total": 0
+    },
+    {
+      "run": 5,
+      "pid": 3363,
+      "wall_time_ms": 453.671932220459,
+      "close_duration_ms": 2634.6583366394043,
+      "am_start": {
+        "this_time": null,
+        "total_time": 339,
+        "wait_time": 348,
+        "launch_state": "WARM"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 45016,
+        "native_heap_pss_kb": 26596,
+        "code_pss_kb": 110784,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 211106,
+        "total_rss_kb": 288364,
+        "swap_pss_kb": 1334
+      },
+      "gfxinfo": {
+        "total_frames": 25,
+        "janky_frames": 23,
+        "jank_pct": 92.0,
+        "p50_ms": 150,
+        "p90_ms": 300,
+        "p95_ms": 400,
+        "p99_ms": 500,
+        "slow_ui_thread": 12,
+        "slow_draw_cmds": 12,
+        "missed_vsync": 8,
+        "high_input_lat": 11,
+        "deadline_missed": 14,
+        "gpu_p50_ms": 4950,
+        "gpu_p90_ms": 4950
+      },
+      "davey_breakdown": [],
+      "gc_events_count": 2,
+      "skipped_frames_total": 0
+    }
+  ],
+  "overlay_cold_start": [
+    {
+      "run": 1,
+      "pid": 1476,
+      "wall_time_ms": 1919.7032451629639,
+      "am_start": {
+        "this_time": null,
+        "total_time": 1801,
+        "wait_time": 1807,
+        "launch_state": "COLD"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 51948,
+        "native_heap_pss_kb": 16008,
+        "code_pss_kb": 155944,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 254587,
+        "total_rss_kb": 334620,
+        "swap_pss_kb": 1253
+      },
+      "gfxinfo": {
+        "total_frames": 28,
+        "janky_frames": 18,
+        "jank_pct": 64.29,
+        "p50_ms": 57,
+        "p90_ms": 400,
+        "p95_ms": 750,
+        "p99_ms": 850,
+        "slow_ui_thread": 0,
+        "slow_draw_cmds": 0,
+        "missed_vsync": 0,
+        "high_input_lat": 28,
+        "deadline_missed": 0,
+        "gpu_p50_ms": 8,
+        "gpu_p90_ms": 4950
+      },
+      "davey_breakdown": [],
+      "gc_events_count": 2,
+      "skipped_frames_total": 94
+    },
+    {
+      "run": 2,
+      "pid": 2074,
+      "wall_time_ms": 1344.949722290039,
+      "am_start": {
+        "this_time": null,
+        "total_time": 1246,
+        "wait_time": 1257,
+        "launch_state": "COLD"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 62140,
+        "native_heap_pss_kb": 16204,
+        "code_pss_kb": 157696,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 267635,
+        "total_rss_kb": 348592,
+        "swap_pss_kb": 1259
+      },
+      "gfxinfo": {
+        "total_frames": 34,
+        "janky_frames": 22,
+        "jank_pct": 64.71,
+        "p50_ms": 38,
+        "p90_ms": 350,
+        "p95_ms": 500,
+        "p99_ms": 600,
+        "slow_ui_thread": 7,
+        "slow_draw_cmds": 9,
+        "missed_vsync": 7,
+        "high_input_lat": 20,
+        "deadline_missed": 12,
+        "gpu_p50_ms": 13,
+        "gpu_p90_ms": 4950
+      },
+      "davey_breakdown": [],
+      "gc_events_count": 2,
+      "skipped_frames_total": 35
+    },
+    {
+      "run": 3,
+      "pid": 2423,
+      "wall_time_ms": 1356.2722206115723,
+      "am_start": {
+        "this_time": null,
+        "total_time": 1262,
+        "wait_time": 1266,
+        "launch_state": "COLD"
+      },
+      "meminfo": {
+        "java_heap_pss_kb": 64200,
+        "native_heap_pss_kb": 16252,
+        "code_pss_kb": 158496,
+        "graphics_pss_kb": 0,
+        "total_pss_kb": 270656,
+        "total_rss_kb": 351916,
+        "swap_pss_kb": 1257
+      },
+      "gfxinfo": {
+        "total_frames": 29,
+        "janky_frames": 26,
+        "jank_pct": 89.66,
+        "p50_ms": 97,
+        "p90_ms": 350,
+        "p95_ms": 500,
+        "p99_ms": 600,
+        "slow_ui_thread": 10,
+        "slow_draw_cmds": 13,
+        "missed_vsync": 7,
+        "high_input_lat": 13,
+        "deadline_missed": 16,
+        "gpu_p50_ms": 4950,
+        "gpu_p90_ms": 4950
+      },
+      "davey_breakdown": [],
+      "gc_events_count": 2,
+      "skipped_frames_total": 37
+    }
+  ],
+  "voice_key_trigger": [
+    {
+      "run": 1,
+      "ts_key": "10-04 09:54:28.501",
+      "ts_act_start": null,
+      "ts_displayed": null,
+      "ts_audio_init": null,
+      "audio_error": null
+    },
+    {
+      "run": 2,
+      "ts_key": "10-04 09:54:40.770",
+      "ts_act_start": null,
+      "ts_displayed": null,
+      "ts_audio_init": null,
+      "audio_error": null
+    },
+    {
+      "run": 3,
+      "ts_key": "10-04 09:54:52.763",
+      "ts_act_start": null,
+      "ts_displayed": null,
+      "ts_audio_init": null,
+      "audio_error": null
+    }
+  ],
+  "ui_dpad_navigation": [
+    {
+      "run": 1,
+      "gfx": {
+        "total_frames": 32,
+        "janky_frames": 15,
+        "jank_pct": 46.88,
+        "p50_ms": 9,
+        "p90_ms": 200,
+        "p95_ms": 250,
+        "p99_ms": 300,
+        "slow_ui_thread": 9,
+        "slow_draw_cmds": 4,
+        "missed_vsync": 6,
+        "high_input_lat": 5,
+        "deadline_missed": 10,
+        "gpu_p50_ms": 7,
+        "gpu_p90_ms": 16
+      }
+    },
+    {
+      "run": 2,
+      "gfx": {
+        "total_frames": 23,
+        "janky_frames": 2,
+        "jank_pct": 8.7,
+        "p50_ms": 9,
+        "p90_ms": 16,
+        "p95_ms": 31,
+        "p99_ms": 46,
+        "slow_ui_thread": 0,
+        "slow_draw_cmds": 0,
+        "missed_vsync": 2,
+        "high_input_lat": 0,
+        "deadline_missed": 2,
+        "gpu_p50_ms": 7,
+        "gpu_p90_ms": 8
+      }
+    },
+    {
+      "run": 3,
+      "gfx": {
+        "total_frames": 18,
+        "janky_frames": 1,
+        "jank_pct": 5.56,
+        "p50_ms": 7,
+        "p90_ms": 10,
+        "p95_ms": 600,
+        "p99_ms": 600,
+        "slow_ui_thread": 0,
+        "slow_draw_cmds": 1,
+        "missed_vsync": 0,
+        "high_input_lat": 1,
+        "deadline_missed": 1,
+        "gpu_p50_ms": 7,
+        "gpu_p90_ms": 8
+      }
+    },
+    {
+      "run": 4,
+      "gfx": {
+        "total_frames": 16,
+        "janky_frames": 0,
+        "jank_pct": 0.0,
+        "p50_ms": 7,
+        "p90_ms": 8,
+        "p95_ms": 9,
+        "p99_ms": 9,
+        "slow_ui_thread": 0,
+        "slow_draw_cmds": 0,
+        "missed_vsync": 0,
+        "high_input_lat": 0,
+        "deadline_missed": 0,
+        "gpu_p50_ms": 7,
+        "gpu_p90_ms": 7
+      }
+    },
+    {
+      "run": 5,
+      "gfx": {
+        "total_frames": 18,
+        "janky_frames": 1,
+        "jank_pct": 5.56,
+        "p50_ms": 7,
+        "p90_ms": 9,
+        "p95_ms": 73,
+        "p99_ms": 73,
+        "slow_ui_thread": 1,
+        "slow_draw_cmds": 0,
+        "missed_vsync": 0,
+        "high_input_lat": 0,
+        "deadline_missed": 1,
+        "gpu_p50_ms": 7,
+        "gpu_p90_ms": 8
+      }
+    }
+  ],
+  "task_switching": [
+    {
+      "run": 1,
+      "pid_before": 2423,
+      "pid_during": 2423,
+      "pid_survived": true,
+      "resume_time_ms": 420.2086925506592,
+      "am_start": {
+        "this_time": null,
+        "total_time": 2078,
+        "wait_time": 321,
+        "launch_state": "HOT"
+      },
+      "pss_before_kb": 168027,
+      "pss_after_kb": 138746
+    },
+    {
+      "run": 2,
+      "pid_before": 2423,
+      "pid_during": 2423,
+      "pid_survived": true,
+      "resume_time_ms": 223.37031364440918,
+      "am_start": {
+        "this_time": null,
+        "total_time": 2078,
+        "wait_time": 125,
+        "launch_state": "HOT"
+      },
+      "pss_before_kb": 158175,
+      "pss_after_kb": 124741
+    },
+    {
+      "run": 3,
+      "pid_before": 2423,
+      "pid_during": 2423,
+      "pid_survived": true,
+      "resume_time_ms": 214.5545482635498,
+      "am_start": {
+        "this_time": null,
+        "total_time": 2078,
+        "wait_time": 116,
+        "launch_state": "HOT"
+      },
+      "pss_before_kb": 132012,
+      "pss_after_kb": 121816
+    }
+  ],
+  "atrace_summary": {}
+}

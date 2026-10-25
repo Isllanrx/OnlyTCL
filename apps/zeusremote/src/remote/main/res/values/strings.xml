@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ZeusRemote</string>
+    <string name="open_on_phone">Abra no celular:\n%1$s\n\nNo iPhone: Compartilhar › Adicionar à Tela de Início</string>
+    <string name="no_network">TV sem rede local</string>
+</resources>

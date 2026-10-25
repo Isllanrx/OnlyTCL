@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ClaudeTvOverlayAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/claude_tv_overlay_enter</item>
+        <item name="android:windowExitAnimation">@anim/claude_tv_overlay_exit</item>
+    </style>
+</resources>

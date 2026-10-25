@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ZeusRemote</string>
+    <string name="searching">Procurando a TV na rede…</string>
+    <string name="not_found">TV não encontrada.\nConfira se o celular está no mesmo Wi-Fi da TV e se ela está ligada.\n\nToque para tentar de novo.</string>
+</resources>

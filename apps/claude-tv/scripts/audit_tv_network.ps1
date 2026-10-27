@@ -1,8 +1,10 @@
 param(
-    [string]$TvIp = "192.168.76.209"
+    [string]$TvIp = ""
 )
 
-$adb = "E:\Android\Sdk\platform-tools\adb.exe"
+. "$PSScriptRoot\load_env.ps1"
+if (-not $TvIp) { $TvIp = $env:TV_IP }
+$adb = $env:ADB_PATH
 
 Write-Host "=== CONECTANDO AO ADB (${TvIp}) ===" -ForegroundColor Cyan
 & $adb connect "${TvIp}:5555"

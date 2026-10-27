@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-ADB="${ADB:-adb} -s ${TV:-192.168.76.209:5555}"
+ADB="${ADB:-adb} -s ${TV:-${TV_IP:-192.168.1.100}:5555}"
 PKG="${1:-gamepass.fire.tv}"
 PID="$($ADB shell pidof $PKG | tr -d '')"
 if [ -z "$PID" ]; then

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-ADB="${ADB:-adb} -s ${TV:-192.168.76.209:5555}"
+ADB="${ADB:-adb} -s ${TV:-${TV_IP:-192.168.1.100}:5555}"
 OUT="${1:-trace_tcl.pftrace}"
 echo "Iniciando captura de 10s via Perfetto na TV TCL..."
 $ADB shell "perfetto -c - --txt -o /data/misc/perfetto-traces/trace.pftrace" <<EOF

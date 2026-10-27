@@ -1,5 +1,6 @@
-$adb = "E:\Android\Sdk\platform-tools\adb.exe"
-$dev = "192.168.76.209:5555"
+. "$PSScriptRoot\load_env.ps1"
+$adb = $env:ADB_PATH
+$dev = $env:TV_DEVICE
 & $adb connect $dev | Out-Null
 
 Write-Host "1. Whitelisting Claude and granting full background priorities..." -ForegroundColor Cyan

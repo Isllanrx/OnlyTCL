@@ -1,10 +1,13 @@
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import subprocess
 import time
 import re
 import json
 
-ADB = r"E:\Android\Sdk\platform-tools\adb.exe"
-DEVICE = "192.168.76.209:5555"
+from load_env import ADB, DEVICE, TV, DEV, PROJECT_ROOT, OUTPUT_DIR
+# DEVICE loaded from load_env
 
 def adb(args):
     return subprocess.run([ADB, "-s", DEVICE] + args, capture_output=True, text=True, errors="replace").stdout.strip()
@@ -73,7 +76,7 @@ for i in range(10):
     results.append(sample)
     print(f"Press {i+1}: T0->T2 (Debounce): {d_T0_T2}ms | T2->T4 (Intent): {d_T2_T4}ms | T0->T4 (Total Input->START): {d_T0_T4}ms | T4->T7: {d_T4_T7}ms")
 
-with open(r"E:\projeto_twitchlit\claude-tv\scripts\audit_caso1_10runs.json", "w", encoding="utf-8") as f:
+with open(str(Path(__file__).resolve().parent / "audit_caso1_10runs.json"), "w", encoding="utf-8") as f:
     json.dump(results, f, indent=2)
 
 print("\nConcluído!")

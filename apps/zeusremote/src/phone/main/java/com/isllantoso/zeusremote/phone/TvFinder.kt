@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit
 
 object TvFinder {
     const val PORT = 8765
-    const val DEFAULT_HOST = "192.168.76.209"
+    const val DEFAULT_HOST = "192.168.1.100"
 
     private const val MARKER = "<title>ZeusRemote</title>"
     private const val DIRECT_TIMEOUT_MS = 1_500

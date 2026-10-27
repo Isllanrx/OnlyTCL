@@ -1,3 +1,6 @@
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import subprocess
 import time
 import re
@@ -5,8 +8,8 @@ import json
 import statistics
 from datetime import datetime
 
-ADB = r"E:\Android\Sdk\platform-tools\adb.exe"
-DEVICE = "192.168.76.209:5555"
+from load_env import ADB, DEVICE, TV, DEV, PROJECT_ROOT, OUTPUT_DIR
+# DEVICE loaded from load_env
 PKG = "com.anthropic.claude"
 OVERLAY_ACT = "com.anthropic.claude/.mainactivity.AssistantOverlayActivity"
 MAIN_ACT = "com.anthropic.claude/.mainactivity.MainActivity"

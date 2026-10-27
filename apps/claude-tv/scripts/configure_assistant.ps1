@@ -1,9 +1,10 @@
+. "$PSScriptRoot\load_env.ps1"
 param(
-    [string]$Device = "192.168.76.209:5555"
+    [string]$Device = $env:TV_DEVICE
 )
 
 $ErrorActionPreference = "Stop"
-$adb = "E:\Android\Sdk\platform-tools\adb.exe"
+$adb = $env:ADB_PATH
 $role = "android.app.role.ASSISTANT"
 $package = "com.anthropic.claude"
 

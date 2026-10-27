@@ -1,5 +1,9 @@
-$adb = "E:\Android\Sdk\platform-tools\adb.exe"
-& $adb connect 192.168.76.209:5555
+. "$PSScriptRoot\load_env.ps1"
+$adb = $env:ADB_PATH
+$device = $env:TV_DEVICE
+$outDir = $env:OUTPUT_DIR
+if (-not (Test-Path $outDir)) { New-Item -ItemType Directory -Force -Path $outDir | Out-Null }
+& $adb connect $device
 
 Write-Host "=== 1. GOING HOME ==="
 & $adb shell "input keyevent 3"
@@ -17,7 +21,7 @@ Write-Host "=== 4. CURRENT WINDOW FOCUS AFTER MIC KEY ==="
 
 Write-Host "=== 5. CAPTURING OVERLAY SCREENSHOT ==="
 & $adb shell "screencap -p /sdcard/overlay_live_test.png"
-& $adb pull /sdcard/overlay_live_test.png "E:\projeto_twitchlit\claude-tv\screenshots\overlay_live_test.png"
+& $adb pull /sdcard/overlay_live_test.png "$outDir\overlay_live_test.png"
 
 Write-Host "=== 6. VERIFYING BOUND SERVICES ==="
 & $adb shell "dumpsys accessibility services"

@@ -1,5 +1,6 @@
+. "$PSScriptRoot\load_env.ps1"
 param(
-    [string]$Device = "192.168.76.209:5555",
+    [string]$Device = $env:TV_DEVICE,
     [int]$Seconds = 30
 )
 
@@ -10,7 +11,7 @@ param(
 # Uso: abra o modo de voz na TV, rode este script, faça uma pergunta e aguarde o fim.
 
 $ErrorActionPreference = "Continue"
-$adb = "E:\Android\Sdk\platform-tools\adb.exe"
+$adb = $env:ADB_PATH
 if (-not (Test-Path -LiteralPath $adb)) { $adb = "adb" }
 $package = "com.anthropic.claude"
 

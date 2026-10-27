@@ -1,3 +1,8 @@
+. "$PSScriptRoot\load_env.ps1"
+$adb = $env:ADB_PATH
+$device = $env:TV_DEVICE
+$outDir = $env:OUTPUT_DIR
+if (-not (Test-Path $outDir)) { New-Item -ItemType Directory -Force -Path $outDir | Out-Null }
 param (
     [string]$TvIp = "",
     [string]$ApkPath = "",
@@ -10,9 +15,7 @@ param (
 # o APK reassinado perde o perfil de nuvem do Play, e sem AOT a MainActivity levou 8,6 s
 # até "Fully drawn" na TCL (A55 1,3 GHz, dex de 34 MB rodando só com JIT).
 
-$adb = "E:\Android\Sdk\platform-tools\adb.exe"
 if (-not (Test-Path $adb)) {
-    $adb = "adb"
 }
 
 $apk = if ($ApkPath) { $ApkPath } else { Join-Path $PSScriptRoot "..\release\claude-tv-1.260930-20-candidate.apk" }

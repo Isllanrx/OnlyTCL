@@ -1,7 +1,7 @@
 import re
 import json
 
-TRACE_FILE = r"E:\projeto_twitchlit\claude-tv\scripts\overlay_atrace.txt"
+TRACE_FILE = str(Path(__file__).resolve().parent / "overlay_atrace.txt")
 
 print("Analisando trace do overlay...")
 

@@ -7,12 +7,12 @@ import zipfile
 import sys
 import os
 
-APK_PATH = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else r"E:\projeto_twitchlit\claude-tv\release\claude-tv-1.260930-20-candidate.apk"
-AAPT = r"E:\Android\Sdk\build-tools\36.0.0\aapt.exe"
-ZIPALIGN = r"E:\Android\Sdk\build-tools\36.0.0\zipalign.exe"
-APKSIGNER = r"E:\Android\Sdk\build-tools\36.0.0\apksigner.bat"
-DEXDUMP = r"E:\Android\Sdk\build-tools\36.0.0\dexdump.exe"
-READELF = r"E:\Android\Sdk\ndk\30.0.16248370\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-readelf.exe"
+APK_PATH = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else str(Path(__file__).resolve().parent.parent / "release" / "claude-tv-1.260930-20-candidate.apk")
+AAPT = os.environ.get("AAPT_PATH", "aapt")
+ZIPALIGN = os.environ.get("ZIPALIGN_PATH", "zipalign")
+APKSIGNER = os.environ.get("APKSIGNER_PATH", "apksigner")
+DEXDUMP = os.environ.get("DEXDUMP_PATH", "dexdump")
+READELF = os.environ.get("READELF_PATH", "llvm-readelf")
 
 results = []
 

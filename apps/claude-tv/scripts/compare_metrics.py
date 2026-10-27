@@ -1,8 +1,8 @@
 import json
 import statistics
 
-BASE_FILE = r"E:\projeto_twitchlit\claude-tv\scripts\profiling_raw_results.json"
-OPT_FILE = r"E:\projeto_twitchlit\claude-tv\scripts\profiling_otimizado_results.json"
+BASE_FILE = str(Path(__file__).resolve().parent / "profiling_raw_results.json")
+OPT_FILE = str(Path(__file__).resolve().parent / "profiling_otimizado_results.json")
 
 b = json.load(open(BASE_FILE, encoding="utf-8"))
 o = json.load(open(OPT_FILE, encoding="utf-8"))

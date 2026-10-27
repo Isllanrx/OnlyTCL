@@ -8,12 +8,12 @@ import org.junit.Test
 class TvFinderTest {
     @Test
     fun subnetCoversLanWithoutOwnAddress() {
-        val hosts = TvFinder.subnetHosts("192.168.76.170")
+        val hosts = TvFinder.subnetHosts("192.168.1.50")
         assertEquals(253, hosts.size)
-        assertEquals("192.168.76.1", hosts.first())
-        assertEquals("192.168.76.254", hosts.last())
-        assertFalse("192.168.76.170" in hosts)
-        assertTrue("192.168.76.209" in hosts)
+        assertEquals("192.168.1.1", hosts.first())
+        assertEquals("192.168.1.254", hosts.last())
+        assertFalse("192.168.1.50" in hosts)
+        assertTrue("192.168.1.100" in hosts)
     }
 
     @Test
@@ -24,6 +24,6 @@ class TvFinderTest {
 
     @Test
     fun urlUsesBridgePort() {
-        assertEquals("http://192.168.76.209:8765/", TvFinder.url("192.168.76.209"))
+        assertEquals("http://192.168.1.100:8765/", TvFinder.url("192.168.1.100"))
     }
 }

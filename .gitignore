@@ -6,3 +6,29 @@ Thumbs.db
 /build/
 .gradle/
 
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Graphify cache
+graphify-out/cache/
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS & temporary files
+*.tmp
+*.bak

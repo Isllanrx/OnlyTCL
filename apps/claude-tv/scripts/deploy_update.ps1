@@ -1,5 +1,7 @@
+. "$PSScriptRoot\load_env.ps1"
+if (-not $TvIp) { $TvIp = $env:TV_IP }
 param(
-    [string]$TvIp = "192.168.76.209"
+    [string]$TvIp = ""
 )
 
 $ErrorActionPreference = "Stop"

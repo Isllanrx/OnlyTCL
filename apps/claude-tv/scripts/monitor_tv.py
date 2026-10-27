@@ -1,3 +1,6 @@
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 """Capture Android logs, remote input events, and Claude CPU/memory samples."""
 from datetime import datetime
 from pathlib import Path
@@ -7,8 +10,8 @@ import tempfile
 import threading
 import time
 
-ADB = r"E:\Android\Sdk\platform-tools\adb.exe"
-TV = "192.168.76.209:5555"
+from load_env import ADB, DEVICE, TV, DEV, PROJECT_ROOT, OUTPUT_DIR
+# TV loaded from load_env
 PACKAGE = "com.anthropic.claude"
 SAMPLE_SECONDS = 5
 

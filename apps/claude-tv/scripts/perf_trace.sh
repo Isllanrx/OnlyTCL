@@ -4,7 +4,7 @@
 set -u
 export MSYS_NO_PATHCONV=1
 RUN=${1:?rodada}; SC=${2:?cenario}
-ADB="${ADB:-/e/Android/Sdk/platform-tools/adb.exe} -s ${TV:-192.168.76.209:5555}"
+ADB="${ADB:-adb} -s ${TV:-${TV_IP:-192.168.1.100}:5555}"
 PKG=com.anthropic.claude
 DIR="$(cd "$(dirname "$0")" && pwd)"
 OUT=".tv-dumps/perf/$RUN"; mkdir -p "$OUT"

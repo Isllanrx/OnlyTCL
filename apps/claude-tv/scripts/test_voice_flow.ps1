@@ -1,11 +1,15 @@
-$adb = "E:\Android\Sdk\platform-tools\adb.exe"
-& $adb connect 192.168.76.209:5555
+. "$PSScriptRoot\load_env.ps1"
+$adb = $env:ADB_PATH
+$device = $env:TV_DEVICE
+$outDir = $env:OUTPUT_DIR
+if (-not (Test-Path $outDir)) { New-Item -ItemType Directory -Force -Path $outDir | Out-Null }
+& $adb connect $device
 
 Write-Host "=== 1. Testando tecla Voice Assist (231) no controle ==="
 & $adb shell "input keyevent 231"
 Start-Sleep -Seconds 2
 & $adb shell "screencap -p /sdcard/voice_assist_triggered.png"
-& $adb pull /sdcard/voice_assist_triggered.png "E:\projeto_twitchlit\claude-tv\screenshots\voice_assist_triggered.png"
+& $adb pull /sdcard/voice_assist_triggered.png "$outDir\voice_assist_triggered.png"
 
 Write-Host "=== 2. Testando comando de voz local via RTK: 'abrir youtube' ==="
 & $adb logcat -c

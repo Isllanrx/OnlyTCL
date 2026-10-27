@@ -10,7 +10,7 @@ from profiler_core import (
     parse_am_start, parse_davey_and_gc, PKG, MAIN_ACT, OVERLAY_ACT
 )
 
-OUTPUT_FILE = r"E:\projeto_twitchlit\claude-tv\scripts\profiling_otimizado_results.json"
+OUTPUT_FILE = str(Path(__file__).resolve().parent / "profiling_otimizado_results.json")
 
 results = {
     "device_info": {},

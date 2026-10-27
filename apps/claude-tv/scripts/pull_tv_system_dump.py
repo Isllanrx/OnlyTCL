@@ -1,11 +1,14 @@
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import subprocess
 import os
 import sys
 from pathlib import Path
 
-ADB = r"E:\Android\Sdk\platform-tools\adb.exe"
-TV = "192.168.76.209:5555"
-OUT_BASE = Path(r"E:\projeto_twitchlit\tv_system_dump")
+from load_env import ADB, DEVICE, TV, DEV, PROJECT_ROOT, OUTPUT_DIR
+# TV loaded from load_env
+OUT_BASE = OUTPUT_DIR / "tv_system_dump"
 
 def adb_cmd(*args):
     return subprocess.run([ADB, "-s", TV, *args], capture_output=True, text=True, timeout=30)

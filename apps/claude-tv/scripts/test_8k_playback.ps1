@@ -1,5 +1,8 @@
-$adb = "E:\Android\Sdk\platform-tools\adb.exe"
-$device = "192.168.76.209:5555"
+. "$PSScriptRoot\load_env.ps1"
+$adb = $env:ADB_PATH
+$device = $env:TV_DEVICE
+$outDir = $env:OUTPUT_DIR
+if (-not (Test-Path $outDir)) { New-Item -ItemType Directory -Force -Path $outDir | Out-Null }
 
 Write-Host "1. Conectando via ADB..." -ForegroundColor Cyan
 & $adb connect $device
@@ -20,11 +23,11 @@ Start-Sleep -Seconds 5
 
 Write-Host "6. Capturando screenshot da TV..." -ForegroundColor Cyan
 & $adb -s $device shell screencap -p /sdcard/screen_8k_test.png
-& $adb -s $device pull /sdcard/screen_8k_test.png "C:\Users\Isllan Toso\.gemini\antigravity-cli\brain\51730dae-5366-4af4-ab18-7de637c4e76e\tv_screen_8k.png"
+& $adb -s $device pull /sdcard/screen_8k_test.png "$outDir\tv_screen_8k.png"
 
 Write-Host "7. Extraindo logs da VPU Realtek e MediaCodec..." -ForegroundColor Cyan
 $logs = & $adb -s $device shell "logcat -d | grep -iE 'realtek|vdec|codec|omx|mediacodec|surfaceflinger|videoplayer|vlc|error|warn'"
-$logsPath = "E:\projeto_twitchlit\tv_system_dump\dumps\test_8k_logcat.txt"
+$logsPath = "$outDir\test_8k_logcat.txt"
 [System.IO.File]::WriteAllLines($logsPath, $logs)
 
 Write-Host "8. Status de reproducao SurfaceFlinger..." -ForegroundColor Cyan

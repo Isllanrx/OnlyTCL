@@ -6,7 +6,7 @@ from audit_caso1_core import (
     adb, run_single_key219_test, compute_deltas, PKG, MAIN_ACT, OVERLAY_ACT
 )
 
-OUTPUT_FILE = r"E:\projeto_twitchlit\claude-tv\scripts\audit_caso1_results.json"
+OUTPUT_FILE = str(Path(__file__).resolve().parent / "audit_caso1_results.json")
 
 results = {
     "scenario_A_cold_process": [],

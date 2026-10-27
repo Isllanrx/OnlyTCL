@@ -1,16 +1,19 @@
+. "$PSScriptRoot\load_env.ps1"
 $ErrorActionPreference = "Stop"
-$sdk = "E:\Android\Sdk"
+
+$appDir = (Resolve-Path "$PSScriptRoot\..").Path
+$sdk = if ($env:ANDROID_SDK_ROOT) { $env:ANDROID_SDK_ROOT } elseif ($env:ANDROID_HOME) { $env:ANDROID_HOME } else { "C:\Android\Sdk" }
 $buildTools = (Get-ChildItem -Path "$sdk\build-tools" | Sort-Object Name -Descending | Select-Object -First 1).FullName
 $zipalign = "$buildTools\zipalign.exe"
 $apksigner = "$buildTools\apksigner.bat"
 
-$decompiledDir = "E:\projeto_twitchlit\claude-tv\claude_full_decompiled"
-$releaseDir = "E:\projeto_twitchlit\claude-tv\release"
+$decompiledDir = "$appDir\claude_full_decompiled"
+$releaseDir = "$appDir\release"
 $unsignedApk = "$releaseDir\claude-tv-otimizado-unsigned.apk"
 $alignedApk = "$releaseDir\claude-tv-otimizado-aligned.apk"
 $signedApk = "$releaseDir\claude-tv-1.260930-20-otimizado.apk"
-$keystore = "E:\projeto_twitchlit\claude-tv\keystore\claudetv-release.jks"
-$keystorePass = "claudetv2026"
+$keystore = "$appDir\keystore\claudetv-release.jks"
+$keystorePass = if ($env:CLAUDE_TV_KEYSTORE_PASS) { $env:CLAUDE_TV_KEYSTORE_PASS } else { "claudetv2026" }
 
 if (-not (Test-Path $releaseDir)) {
     New-Item -ItemType Directory -Force -Path $releaseDir | Out-Null

@@ -1,11 +1,13 @@
 param(
-    [string]$TvIp = "192.168.76.209",
+    [string]$TvIp = "",
     [switch]$SkipDecompile
 )
 
+. "$PSScriptRoot\load_env.ps1"
 $ErrorActionPreference = "Continue"
-$adb = "E:\Android\Sdk\platform-tools\adb.exe"
-$projectRoot = "E:\projeto_twitchlit"
+if (-not $TvIp) { $TvIp = $env:TV_IP }
+$adb = $env:ADB_PATH
+$projectRoot = $env:PROJECT_ROOT
 
 Write-Host "Conectando à Smart TV TCL em ${TvIp}:5555..." -ForegroundColor Cyan
 & $adb connect "${TvIp}:5555"

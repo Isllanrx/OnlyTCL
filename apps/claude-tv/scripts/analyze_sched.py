@@ -1,6 +1,6 @@
 import re
 
-TRACE_FILE = r"E:\projeto_twitchlit\claude-tv\scripts\overlay_atrace.txt"
+TRACE_FILE = str(Path(__file__).resolve().parent / "overlay_atrace.txt")
 
 print("Calculando tempo de CPU e agendamento dos threads do Claude (TGID 2121)...")
 
